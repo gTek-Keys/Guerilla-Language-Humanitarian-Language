@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  gtek-ecosystem:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+    volumes:
+      - ./src:/app/src
+      - ./config:/app/config
+    networks:
+      - gtek-network
+
+  samsung-app:
+    build: ./src/gDaTaNomOcS-samsung-app
+    ports:
+      - "3001:3001"
+    environment:
+      - KNOX_ENABLED=true
+      - SAMSUNG_KNOX_API_KEY=${KNOX_API_KEY}
+    networks:
+      - gtek-network
+
+  polystack-ide:
+    build: ./src/polystack-ide
+    ports:
+      - "3002:3002"
+    environment:
+      - AI_ENABLED=true
+      - GRANT_GENERATION=true
+    volumes:
+      - ./workspace:/app/workspace
+    networks:
+      - gtek-network
+
+  workflow-engine:
+    build: ./src/saqqara-giza-workflow
+    ports:
+      - "3003:3003"
+    environment:
+      - WORKFLOW_ENGINE=saqqara-giza
+    networks:
+      - gtek-network
+
+  economics-framework:
+    build: ./src/liquinomocs-framework
+    ports:
+      - "3004:3004"
+    environment:
+      - ECONOMIC_MODEL=natural-law
+    networks:
+      - gtek-network
+
+  blockchain-escrow:
+    image: ethereum/client-go:latest
+    ports:
+      - "8545:8545"
+    volumes:
+      - blockchain-data:/root/.ethereum
+    networks:
+      - gtek-network
+
+  redis-cache:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - gtek-network
+
+networks:
+  gtek-network:
+    driver: bridge
+
+volumes:
+  blockchain-data:
