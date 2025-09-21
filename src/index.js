@@ -15,10 +15,10 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Component imports
-const gDaTaNomOcSApp = require('./gDaTaNomOcS-samsung-app');
-const polyStackIDE = require('./polystack-ide');
-const saqqaraGizaWorkflow = require('./saqqara-giza-workflow');
-const liquiNomOcsFramework = require('./liquinomocs-framework');
+const gDaTaNomOcSApp = require('./gDaTaNomOcS-samsung-app/index.js');
+const polyStackIDE = require('./polystack-ide/index.js');
+const saqqaraGizaWorkflow = require('./saqqara-giza-workflow/index.js');
+const liquiNomOcsFramework = require('./liquinomocs-framework/index.js');
 
 // Routes
 app.get('/', (req, res) => {

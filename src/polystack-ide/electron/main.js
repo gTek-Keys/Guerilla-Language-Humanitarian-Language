@@ -1,3 +1,10 @@
+// This file is only used when running in Electron environment
+// For web server, just export placeholder functions
+if (typeof window === 'undefined' && !process.versions.electron) {
+  module.exports = { createWindow: () => console.log('Electron not available in server mode') };
+  return;
+}
+
 const { app, BrowserWindow, Menu, ipcMain, dialog } = require('electron');
 const path = require('path');
 const isDev = require('electron-is-dev');
