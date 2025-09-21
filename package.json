@@ -1,0 +1,78 @@
+{
+  "name": "gtek-integrated-ecosystem",
+  "version": "1.0.0",
+  "description": "gTek Integrated Ecosystem: Saqqara-Giza sovereign workflow with gDaTaNomOcS cybersecurity protocol, PolyStack IDE, and LiquiNomOcs economic theory. Samsung Ultra exclusive data sovereignty app with Rhodium-backed commissions. Ancient wisdom meets modern tech.",
+  "main": "index.js",
+  "private": false,
+  "author": "Jerome Elston Hill Jr.",
+  "license": "MIT",
+  "homepage": "https://gtek-integrated-ecosystem.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gTek-Keys/Guerilla-Language-Humanitarian-Language.git"
+  },
+  "keywords": [
+    "data-sovereignty",
+    "cybersecurity",
+    "samsung-ultra",
+    "ancient-wisdom",
+    "blockchain",
+    "rhodium",
+    "saqqara-giza",
+    "polymath-vizier",
+    "liquidnomocs",
+    "guerilla-language"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:saqqara\" \"npm run dev:polystack\" \"npm run dev:gdatanomocs\"",
+    "dev:saqqara": "cd apps/saqqara-workflow && npm run dev",
+    "dev:polystack": "cd apps/polystack-ide && npm run electron",
+    "dev:gdatanomocs": "cd apps/gdatanomocs && npm run start",
+    "build": "npm run build:saqqara && npm run build:polystack && npm run build:gdatanomocs",
+    "build:saqqara": "cd apps/saqqara-workflow && npm run build",
+    "build:polystack": "cd apps/polystack-ide && npm run build",
+    "build:gdatanomocs": "cd apps/gdatanomocs && npm run build",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "install:all": "npm install && npm run install:apps",
+    "install:apps": "cd apps/saqqara-workflow && npm install && cd ../polystack-ide && npm install && cd ../gdatanomocs && npm install",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "deploy": "vercel --prod"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.6.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.0"
+  },
+  "dependencies": {
+    "@gtek/liquidnomocs-framework": "workspace:*"
+  },
+  "metadata": {
+    "owner": "Jerome Elston Hill Jr.",
+    "entity": "Home Made Productions (EIN: 88-3480907)",
+    "crid": "51509329",
+    "codex_sovereign_id": "DIV-LA-JHILL-STFL02035",
+    "created_date": "2025-09-20",
+    "iron_rule_framework": {
+      "pillar_1": "Not for hire - Commission or charitable donation only",
+      "pillar_2": "Sovereign economic system rooted in Saqqara-Giza principles",
+      "pillar_3": "Trust as sole recipient and manager of all funds",
+      "pillar_4": "All commissions collateralized in Rhodium"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "name": "@gtek/liquidnomocs-framework",
+  "version": "1.0.0",
+  "description": "Natural law economic theory implementation with Land + Air + Water liquidity calculations",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "liquidnomocs",
+    "economic-theory",
+    "natural-law",
+    "anti-colonial",
+    "resistance",
+    "land-air-water",
+    "liquidity",
+    "sustainability",
+    "ancient-wisdom",
+    "iron-rule",
+    "rhodium"
+  ],
+  "author": "Jerome Elston Hill Jr.",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.5",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "jest": "^29.6.2",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "decimal.js": "^10.4.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./economic": {
+      "import": "./dist/economic/index.js",
+      "require": "./dist/economic/index.js",
+      "types": "./dist/economic/index.d.ts"
+    },
+    "./resistance": {
+      "import": "./dist/resistance/index.js",
+      "require": "./dist/resistance/index.js",
+      "types": "./dist/resistance/index.d.ts"
+    },
+    "./sustainability": {
+      "import": "./dist/sustainability/index.js",
+      "require": "./dist/sustainability/index.js",
+      "types": "./dist/sustainability/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gTek-Keys/Guerilla-Language-Humanitarian-Language.git",
+    "directory": "packages/liquidnomocs-framework"
+  },
+  "bugs": {
+    "url": "https://github.com/gTek-Keys/Guerilla-Language-Humanitarian-Language/issues"
+  },
+  "homepage": "https://gtek-integrated-ecosystem.vercel.app/liquidnomocs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "gtek": {
+    "ironRule": "Commission or charitable donation only",
+    "economicTheory": "LiquiNomOcs natural law implementation",
+    "antiColonial": true,
+    "landAirWater": "Primary liquidity components",
+    "rhodiumBacked": true
+  }
+}

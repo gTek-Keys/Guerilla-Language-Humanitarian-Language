@@ -1,0 +1,105 @@
+{
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "devCommand": "npm run dev",
+  "env": {
+    "RHODIUM_VERIFICATION_ENDPOINT": "@rhodium_verification_endpoint",
+    "ANCIENT_WISDOM_DB_URL": "@ancient_wisdom_db_url",
+    "IRON_RULE_COMPLIANCE_API": "@iron_rule_compliance_api",
+    "OPENAI_API_KEY": "@openai_api_key",
+    "SAMSUNG_DEV_KEY": "@samsung_dev_key",
+    "KNOX_API_KEY": "@knox_api_key",
+    "NEXT_PUBLIC_CODEX_SOVEREIGN_ID": "DIV-LA-JHILL-STFL02035",
+    "NEXT_PUBLIC_IRON_RULE_FRAMEWORK": "Commission or charitable donation only"
+  },
+  "build": {
+    "env": {
+      "NODE_VERSION": "18.x",
+      "NPM_FLAGS": "--prefer-offline --no-audit"
+    }
+  },
+  "functions": {
+    "app/api/**/*.js": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Iron-Rule-Framework",
+          "value": "Commission or charitable donation only"
+        },
+        {
+          "key": "X-Rhodium-Backed",
+          "value": "true"
+        },
+        {
+          "key": "X-Ancient-Wisdom",
+          "value": "Saqqara-Giza protocols"
+        },
+        {
+          "key": "X-Codex-Sovereign-ID",
+          "value": "DIV-LA-JHILL-STFL02035"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/hire",
+      "destination": "/commission",
+      "permanent": true
+    },
+    {
+      "source": "/employment",
+      "destination": "/iron-rule",
+      "permanent": true
+    },
+    {
+      "source": "/jobs",
+      "destination": "/commission-opportunities",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/djoser",
+      "destination": "/commission/client"
+    },
+    {
+      "source": "/imhotep",
+      "destination": "/commission/advisor"
+    },
+    {
+      "source": "/saqqara-giza",
+      "destination": "/ancient-wisdom"
+    }
+  ],
+  "regions": ["all"],
+  "builds": [
+    {
+      "src": "apps/saqqara-workflow/**",
+      "use": "@vercel/next"
+    },
+    {
+      "src": "packages/liquidnomocs-framework/**",
+      "use": "@vercel/node"
+    }
+  ]
+}

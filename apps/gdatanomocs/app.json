@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "gDaTaNomOcS",
+    "slug": "gdatanomocs",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.gtek.gdatanomocs",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.gtek.gdatanomocs",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "com.samsung.android.knox.permission.KNOX_DEVICE_ADMIN",
+        "com.samsung.android.knox.permission.KNOX_SECURITY"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-screen-orientation",
+        {
+          "initialOrientation": "PORTRAIT_UP"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "gtek-gdatanomocs-2025"
+      },
+      "gtek": {
+        "ironRule": "Commission or charitable donation only",
+        "rhodiumBacked": true,
+        "samsungExclusive": true,
+        "ancientWisdom": "Saqqara-Giza protocols"
+      }
+    }
+  }
+}
