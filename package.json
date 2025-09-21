@@ -1,0 +1,54 @@
+{
+  "name": "gtek-integrated-ecosystem",
+  "version": "1.0.0",
+  "description": "gTek Integrated Ecosystem: Saqqara-Giza sovereign workflow with gDaTaNomOcS cybersecurity protocol, PolyStack IDE, and LiquiNomOcs economic theory",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "npm run build:samsung-app && npm run build:polystack-ide && npm run build:web",
+    "build:samsung-app": "cd src/gDaTaNomOcS-samsung-app && npm run build",
+    "build:polystack-ide": "cd src/polystack-ide && npm run build",
+    "build:web": "cd src/saqqara-giza-workflow && npm run build",
+    "test": "jest",
+    "lint": "eslint src/",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "keywords": [
+    "gTek",
+    "Samsung",
+    "Knox",
+    "blockchain",
+    "AI",
+    "sovereignty",
+    "cybersecurity",
+    "IDE",
+    "workflow",
+    "economics"
+  ],
+  "author": "gTek Keys",
+  "license": "MIT",
+  "workspaces": [
+    "src/gDaTaNomOcS-samsung-app",
+    "src/polystack-ide",
+    "src/saqqara-giza-workflow",
+    "src/liquinomocs-framework"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "nodemon": "^3.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
