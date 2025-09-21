@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "framework": "nextjs",
+  "build": {
+    "env": {
+      "IRON_RULE_FRAMEWORK": "Commission or charitable donation only",
+      "CODEX_SOVEREIGN_ID": "DIV-LA-JHILL-STFL02035",
+      "ANCIENT_WISDOM": "Saqqara-Giza protocols",
+      "PERPLEXITY_API_KEY": "your_perplexity_api_key_here"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Iron-Rule-Framework",
+          "value": "Commission or charitable donation only"
+        },
+        {
+          "key": "X-Codex-Sovereign-ID", 
+          "value": "DIV-LA-JHILL-STFL02035"
+        },
+        {
+          "key": "X-Ancient-Wisdom",
+          "value": "Saqqara-Giza protocols enabled"
+        },
+        {
+          "key": "X-Rhodium-Backing",
+          "value": "15% minimum collateralization"
+        }
+      ]
+    }
+  ]
+}
